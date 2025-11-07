@@ -1,0 +1,19 @@
+00#TRNS#CLENGTH##: number of characters
+00#TRNS#LENGTH###: number of tokens
+00#TRNS#URI######: MS0044LondonSOAS.YarkandTurki7ErdalDocIII.IEDC0155-ugo1
+40#TRNS#PAGES####: pages transcribed: page_range
+80#TRNS#LINEMODEL: segmentation model used for line segmentation
+    (name and/or URL)
+80#TRNS#LINKS####: SOURCE@https://www.invisible-east.org/corpus/155/
+80#TRNS#RECMODEL#: recognition model used for transcription
+    (name and/or URL)
+80#TRNS#REGMODEL#: segmentation model used for region segmentation
+    (name and/or URL)
+90#TRNS#COMMENT##: Transcription published on the Invisible East website
+    (https://www.invisible-east.org/corpus/155/)
+    and released on Zenodo (https://zenodo.org/records/16920215).
+    All text has been taken from the publication, formatting has been changed to match IEDC style
+90#TRNS#CONTRIB##: TRANSCRIBER@Mateen Arghandehpour;CONTRIBUTOR@Arezou Azad
+90#TRNS#DATE#####: 2025-02-24
+90#TRNS#ISSUES###: comma-separated list of issues: UNCORRECTED_OCR,
+    TRANSCRIPTION_ERRORS, INCOMPLETE_TRANSCRIPTION
