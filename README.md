@@ -122,7 +122,7 @@ Use the shelfmark of the collection where we got the images from (manuscript, mi
 * If only the transcribed manuscript is available, so be it  
 
 ### 5. How do we avoid having multiple location IDs for the same city/collection?  
-Please check existing the list of existing location IDs before coining a new one.
+Please check existing the list of existing location IDs in this repo before coining a new one.
 
 ### 6. How do we make sure the third part of the URI is unique?
 
