@@ -1,6 +1,9 @@
 00#MS#SHELFM#####: DOC 43 [AR 10]
 00#MS#URI########: MS0044LondonKhalili.DOC43AR10
 10#MS#GENRES###: IEDC@Administrative_Receipt
+10#MS#AUTHOR#AR##: author(s) on the front page and/or of parts
+    [in one-to-one transcription; replace language code if needed;
+    semicolon-separated]
 10#MS#TITLE#AR###: title(s) on the front page and/or of parts
     [in one-to-one transcription; replace language code if needed;
     semicolon-separated]

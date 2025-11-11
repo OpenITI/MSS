@@ -1,6 +1,9 @@
 00#MS#SHELFM#####: ISACM A154069 (field no. CT-205/3a)
 00#MS#URI########: MS0001ChicagoISAC.ISACMA154069FieldCT205_3a
 10#MS#GENRES###: IEDC@Administrative_Receipt
+10#MS#AUTHOR#AR##: author(s) on the front page and/or of parts
+    [in one-to-one transcription; replace language code if needed;
+    semicolon-separated]
 10#MS#TITLE#AR###: title(s) on the front page and/or of parts
     [in one-to-one transcription; replace language code if needed;
     semicolon-separated]
