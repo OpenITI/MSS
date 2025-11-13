@@ -1,13 +1,10 @@
 00#MS#URI########: MS0049MunichBSB.Arab230P96B
-00#MS#SHELFM#####: Bayerische Staatsbibliothek, Cod.Arab.230
+10#MS#SHELFM#####: Bayerische Staatsbibliothek, Cod.Arab.230
 10#MS#GENRES#####: LMN@Druze
 10#MS#AUTHOR#AR##: author(s) on the front page and/or of parts
     [in one-to-one transcription; replace language code if needed;
     semicolon-separated]
 10#MS#TITLE#AR###: title(s) on the front page and/or of parts
-    [in one-to-one transcription; replace language code if needed;
-    semicolon-separated]
-20#MS#AUTHOR#AR##: author(s) on the front page and/or of parts
     [in one-to-one transcription; replace language code if needed;
     semicolon-separated]
 30#MS#DATE#AH####: date of copy/writing in hijri era: DD-MM-YYYY, 
