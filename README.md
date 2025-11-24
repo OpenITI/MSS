@@ -3,7 +3,6 @@
 A repository for transcriptions of hand-written texts of various kinds 
 (full or partial codices, letters, administrative documents, inscriptions).
 
-
 ## URI structure
 
 Each object has a human-readable and machine-parsable URI.
@@ -16,85 +15,85 @@ The URI consists of 3 components:
     It is possible to have more than one transcription of the same object (e.g.,
     by different transcribers, or a diplomatic and normalized transcription)
 
-Note that the transcription URI must be unique to a specific transcription!
+Note that the transcription ID must be unique to a specific transcription!
 
 ### Components:  
 
 #### 1. Location ID: f"MS{country_code}{city}{institution}"  
-     * prefix "MS" to clearly differentiate manuscript corpus URIs from main corpus URIs  
-     * country_code: [Country dialing code](https://en.wikipedia.org/wiki/List_of_telephone_country_codes#World_numbering_zones). Use "0000" if the country is unknown.
-     * city:   
-       * in English if name exists, otherwise transcription  
-       * only Latin-script letters a-z and A-Z  
-       * Munich, Vienna, Prague, Cairo, Zurich, Gottingen, …  
-     * institution:   
-       * Use commonly used abbreviation if it exists (BL, Bnf, SBB, …);  
-       * otherwise: create abbreviation with Latin-script letters a-z and A-Z  
-       * Full name of the institution should go into the YML file (in English and if possible Arabic-script transcription)  
-     * Regex: r"MSd{4}[A-Za-z]+"  
-     * Examples:   
-       * MS0044LondonBL  
-       * MS0047OsloSchoeyen  
-       * MS0000Unknown  
+* prefix "MS" to clearly differentiate manuscript corpus URIs from main corpus URIs  
+* country_code: [Country dialing code](https://en.wikipedia.org/wiki/List_of_telephone_country_codes#World_numbering_zones). Use "0000" if the country is unknown.
+* city:   
+  * in English if name exists, otherwise transcription  
+  * only Latin-script letters a-z and A-Z  
+  * Munich, Vienna, Prague, Cairo, Zurich, Gottingen, …  
+* institution:   
+  * Use commonly used abbreviation if it exists (BL, Bnf, SBB, …);  
+  * otherwise: create abbreviation with Latin-script letters a-z and A-Z  
+  * Full name of the institution should go into the YML file (in English and if possible Arabic-script transcription)  
+* Regex: r"MSd{4}[A-Za-z]+"  
+* Examples:   
+  * MS0044LondonBL  
+  * MS0047OsloSchoeyen  
+  * MS0000Unknown  
 #### 2. Manuscript ID: f"{collection?}{shelfmark}{part?}"  
-     * Use only Latin-script letters a-z and A-Z; transcribe using [transcription tables](https://docs.google.com/spreadsheets/d/1ROWI7W4UCG4H6AzyE1USx4qpCNdQN9QsZ-qAmYpKVpg/edit?usp=sharing)  
-     * collection: name of the collection within the institution (if applicable)
-     * shelfmark:  
-       * Omit abbreviations like Ms./Hs./Cod./No. (to keep the URIs short)  
-       * Omit all non-alphanumeric characters in the shelfmark; replace any non-alphanumeric characters that serve to divide two numbers with underscore 
-       * Use capitalization to distinguish between words
-       * Full human-readable shelfmark should go into the YML file!  
-     * part (optional): multi-text manuscripts / objects can be split into different parts during the annotation process:  
-       * Infix: **P**  
-       * Manuscripts: 
-         * start page/folio of the part (use A for recto, B for verso): P120, P80A, P30B  
-           ![recto-verso][https://en.wikipedia.org/wiki/File:Recto_and_verso_RTL.svg]
-         * If necessary (e.g., when two texts start on the same page), add the line number where the part starts after A/B (P80A1, P80A12) or number the parts sequentially (P80A1, P80A2)
-       * Other types of objects: number the different parts (P1, P2, …)  
-     * Regex: r"[A-Za-z0-9_]+"  
-     * Examples (only the bold part of the URI is the manuscript ID):   
-       * MS0044LondonBL.**Or8212_166**  
-       * MS0047OsloSchoeyen.**4580**  
-       * MS0049MunichBSB.**Arab230P040B** : the part of the manuscript that starts at folio 40 verso  
-       * MS0049MunichBSB.**Arab230P082A** : the part of the manuscript that starts at folio 82 recto  
+* Use only Latin-script letters a-z and A-Z; transcribe using [transcription tables](https://docs.google.com/spreadsheets/d/1ROWI7W4UCG4H6AzyE1USx4qpCNdQN9QsZ-qAmYpKVpg/edit?usp=sharing)  
+* collection: name of the collection within the institution (if applicable)
+* shelfmark:  
+  * Omit abbreviations like Ms./Hs./Cod./No. (to keep the URIs short)  
+  * Omit all non-alphanumeric characters in the shelfmark; replace any non-alphanumeric characters that serve to divide two numbers with underscore 
+  * Use capitalization to distinguish between words
+  * Full human-readable shelfmark should go into the YML file!  
+* part (optional): multi-text manuscripts / objects can be split into different parts during the annotation process:  
+  * Infix: **P**  
+  * Manuscripts: 
+    * start page/folio of the part (use A for recto, B for verso): P120, P80A, P30B  
+      ![recto-verso][https://en.wikipedia.org/wiki/File:Recto_and_verso_RTL.svg]
+    * If necessary (e.g., when two texts start on the same page), add the line number where the part starts after A/B (P80A1, P80A12) or number the parts sequentially (P80A1, P80A2)
+  * Other types of objects: number the different parts (P1, P2, …)  
+* Regex: r"[A-Za-z0-9_]+"  
+* Examples (only the bold part of the URI is the manuscript ID):   
+  * MS0044LondonBL.**Or8212_166**  
+  * MS0047OsloSchoeyen.**4580**  
+  * MS0049MunichBSB.**Arab230P040B** : the part of the manuscript that starts at folio 40 verso  
+  * MS0049MunichBSB.**Arab230P082A** : the part of the manuscript that starts at folio 82 recto  
 
 #### 3. Transcription ID: f"{contributor}{number}{margin?}-{language}{transcr_type}"
-     * contributor: abbreviation/initials of transcriber/contributor/project  
-     * number: 
-       * Either internal ID number of the contributing project;  
-       * Or running numbers like 001, 002, …  
-       * Or timestamp: YYYYMMDD(HHMMSS)  
-       * Or a combination: YYYYMMDD001, YYYYMMDD002, …  
-     * Margin (optional): marginal texts can be split off into separate files:  
-       * Infix: **Mar**  
-       * By default, all marginal text in a document is in one text file.  
-       * Full text in the margin of another text (e.g., sharḥ): use the page number of the start page of the marginal text in the manuscript ID in combination with the Mar infix: e.g., MS0049MunichBSB.Arab230**P040B**.PV202501027**Mar**-ara1: The marginal text in this manuscript that starts at folio 40 (verso)  
-     * language(s):   
-       * Language code(s) for the language(s) (+scripts) of the text
-         * Language codes are based on [iso639-3](https://iso639-3.sil.org/code_tables/639/data). However, we created additional codes for languages written in different scripts (e.g., 'jua' for "Judaeo-Arabic", Arabic written in Hebrew script). All language codes used in the OpenITI corpus are listed in the [annotation repo](https://github.com/OpenITI/Annotation/blob/master/language_codes.tsv). 
-         * For multilingual texts: combine language codes for each language (-ara1per1)  
-     * transcr_type:  
-       * 1: undefined transcription type  
-       * 2: normalized transcription  
-       * 3: diplomatic transcription  
-     * Regex: r"[A-Za-z0-9]+-(?:[a-z]{3}[0-9])+"  
-     * Examples (only the bold part of the URI is the manuscript ID):   
-       * MS0001NewYorkNYPL.SpencerPersian9.**LMN20250402001-per1**  
-       * MS0044LondonBL.EAP1285_1_12_2.**PV20250402001-ara2** ([url](https://eap.bl.uk/collection/EAP1285-1-12-2))  
-       * MS0049BerlinSBB.Landberg2_71.**AOCP20250402001-ara3per1**  
-       * MS0047OsloSchoeyen.4580.**IEDC0009-bac1**  
-       * MS0001NewYorkNYPL.SpencerPersian9.**LMN20250402001Mar-per1**: all marginal texts in this document  
-       * MS0049MunichBSB.Arab230P040B.**PV202501027Mar-ara1**: the marginal text in this manuscript that starts at folio 40 (verso)  
-  4. **File extension:** (as in the main OpenITI corpus) :  
-     * (no extension) : automatically converted into OpenITI mARkdown  
-     * .completed : structural annotation manually added  
-     * .mARkdown : second person has vetted the structural annotation
+* contributor: abbreviation/initials of transcriber/contributor/project  
+* number: 
+  * Either internal ID number of the contributing project;  
+  * Or running numbers like 001, 002, …  
+  * Or timestamp: YYYYMMDD(HHMMSS)  
+  * Or a combination: YYYYMMDD001, YYYYMMDD002, …  
+* Margin (optional): marginal texts can be split off into separate files:  
+  * Infix: **Mar**  
+  * By default, all marginal text in a document is in one text file.  
+  * Full text in the margin of another text (e.g., sharḥ): use the page number of the start page of the marginal text in the manuscript ID in combination with the Mar infix: e.g., MS0049MunichBSB.Arab230**P040B**.PV202501027**Mar**-ara1: The marginal text in this manuscript that starts at folio 40 (verso)  
+* language(s):   
+  * Language code(s) for the language(s) (+scripts) of the text
+    * Language codes are based on [iso639-3](https://iso639-3.sil.org/code_tables/639/data). However, we created additional codes for languages written in different scripts (e.g., 'jua' for "Judaeo-Arabic", Arabic written in Hebrew script). All language codes used in the OpenITI corpus are listed in the [annotation repo](https://github.com/OpenITI/Annotation/blob/master/language_codes.tsv). 
+    * For multilingual texts: combine language codes for each language (-ara1per1)  
+* transcr_type:  
+  * 1: undefined transcription type  
+  * 2: normalized transcription  
+  * 3: diplomatic transcription  
+* Regex: r"[A-Za-z0-9]+-(?:[a-z]{3}[0-9])+"  
+* Examples (only the bold part of the URI is the manuscript ID):   
+  * MS0001NewYorkNYPL.SpencerPersian9.**LMN20250402001-per1**  
+  * MS0044LondonBL.EAP1285_1_12_2.**PV20250402001-ara2** ([url](https://eap.bl.uk/collection/EAP1285-1-12-2))  
+  * MS0049BerlinSBB.Landberg2_71.**AOCP20250402001-ara3per1**  
+  * MS0047OsloSchoeyen.4580.**IEDC0009-bac1**  
+  * MS0001NewYorkNYPL.SpencerPersian9.**LMN20250402001Mar-per1**: all marginal texts in this document  
+  * MS0049MunichBSB.Arab230P040B.**PV202501027Mar-ara1**: the marginal text in this manuscript that starts at folio 40 (verso)  
+ 4. **File extension:** (as in the main OpenITI corpus) :  
+* (no extension) : automatically converted into OpenITI mARkdown  
+* .completed : structural annotation manually added  
+* .mARkdown : second person has vetted the structural annotation
 
 ### Edge cases:  
-  1. Unknown city, known institution: MS0000UnknownMosque  
-  2. Unknown city, unknown institution: MS0000Unknown  
-  3. city known, Unknown institution: MS0049BerlinUnknown.456231  
-  4. Unknown shelfmark “NN” + random number: MS0049BerlinSBB.NN123456789  
+1. Unknown city, known institution: MS0000UnknownMosque  
+2. Unknown city, unknown institution: MS0000Unknown  
+3. city known, Unknown institution: MS0049BerlinUnknown.456231  
+4. Unknown shelfmark “NN” + random number: MS0049BerlinSBB.NN123456789  
 
 ## FAQ:  
 
@@ -176,8 +175,12 @@ NB: some remarks about specifications in the YML files:
 
 ```
 00#MS#URI########: 
-00#MS#SHELFM#####: shelfmark, shelfmark 
+10#MS#SHELFM#####: shelfmark; shelfmark 
     [in one-to-one transcription]
+10#MS#GENRES#####: src@keyword, src@keyword, src@keyword
+10#MS#AUTHOR#AR##: author(s) on the front page and/or of parts
+    [in one-to-one transcription; replace language code if needed;
+    semicolon-separated]
 10#MS#TITLE#AR###: title(s) on the front page and/or of parts
     [in one-to-one transcription; replace language code if needed;
     semicolon-separated]
@@ -221,14 +224,15 @@ NB: some remarks about specifications in the YML files:
 00#TRNS#LENGTH###: number of tokens
 00#TRNS#URI######: 
 40#TRNS#PAGES####: pages transcribed: page_range
-80#TRNS#LINEMODEL: segmentation model used for line segmentation
-    (name and/or URL)
-80#TRNS#REGMODEL#: segmentation model used for region segmentation
+80#TRNS#BASED####: permalink, permalink, permalink
+80#TRNS#LINKS####: SOURCE@permalink, IIIF@permalink, PDF@permalink, 
+    BIBTEX@permalink
+80#TRNS#LINMODEL#: segmentation model used for line segmentation
     (name and/or URL)
 80#TRNS#RECMODEL#: recognition model used for transcription
     (name and/or URL)
-80#TRNS#LINKS####: SOURCE@permalink, IIIF@permalink, PDF@permalink, 
-    BIBTEX@permalink
+80#TRNS#REGMODEL#: segmentation model used for region segmentation
+    (name and/or URL)
 90#TRNS#CONTRIB##: TRANSCRIPTION@name, CORRECTION@name
    (latin characters; please use consistently)
 90#TRNS#COMMENT##: a free running comment here; you can add as many
