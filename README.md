@@ -247,7 +247,7 @@ NB: some remarks about specifications in the YML files:
 ## Markdown issues:
 
 * Reference to the image file names at the top of the page:  
-  ![page image](./0620ZahiriSamarqandi.SindbadNama_0014.png)  
+  `![page image](./0620ZahiriSamarqandi.SindbadNama_0014.png)`
 * Column marker? 
 
 # Miscellaneous problems
