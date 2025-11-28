@@ -8,10 +8,11 @@
 80#TRNS#RECMODEL#: Manual
 80#TRNS#REGMODEL#: None
 90#TRNS#COMMENT##: Transcription published on the Invisible East website
-    (https://www.invisible-east.org/corpus/233/)
-    and released on Zenodo (https://zenodo.org/records/16920215).
-    The transcription and translation are the original work of the IEDC Team (as yet unpublished in peer-review print)
-90#TRNS#CONTRIB##: TRANSCRIBER@Ofir Haim;CONTRIBUTOR@Arezou Azad;CONTRIBUTOR@Nabi Saqee;CONTRIBUTOR@Pejman Firoozbakhsh
+    (https://www.invisible-east.org/corpus/233/) and released on Zenodo
+    (https://zenodo.org/records/16920215). The transcription and translation
+    are the original work of the IEDC Team (as yet unpublished in peer-review
+    print)
+90#TRNS#CONTRIB##: TRANSCRIBER@Ofir Haim;CONTRIBUTOR@Arezou
+    Azad;CONTRIBUTOR@Nabi Saqee;CONTRIBUTOR@Pejman Firoozbakhsh
 90#TRNS#DATE#####: 2025-02-24
-90#TRNS#ISSUES###: comma-separated list of issues: UNCORRECTED_OCR,
-    TRANSCRIPTION_ERRORS, INCOMPLETE_TRANSCRIPTION
+90#TRNS#ISSUES###: PRIMARY_VERSION

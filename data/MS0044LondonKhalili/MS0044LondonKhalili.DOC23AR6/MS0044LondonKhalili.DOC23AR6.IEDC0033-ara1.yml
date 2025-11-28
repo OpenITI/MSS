@@ -8,10 +8,9 @@
 80#TRNS#RECMODEL#: Manual
 80#TRNS#REGMODEL#: None
 90#TRNS#COMMENT##: Transcription published on the Invisible East website
-    (https://www.invisible-east.org/corpus/33/)
-    and released on Zenodo (https://zenodo.org/records/16920215).
-    The transcription and translation have been taken from a previous publication (see Publications)
+    (https://www.invisible-east.org/corpus/33/) and released on Zenodo
+    (https://zenodo.org/records/16920215). The transcription and translation
+    have been taken from a previous publication (see Publications)
 90#TRNS#CONTRIB##: TRANSCRIBER@Geoffrey Khan;CONTRIBUTOR@Thomas Benfey
 90#TRNS#DATE#####: 2024-08-08
-90#TRNS#ISSUES###: comma-separated list of issues: UNCORRECTED_OCR,
-    TRANSCRIPTION_ERRORS, INCOMPLETE_TRANSCRIPTION
+90#TRNS#ISSUES###: PRIMARY_VERSION
