@@ -4,9 +4,7 @@
 10#MS#AUTHOR#AR##: author(s) on the front page and/or of parts
     [in one-to-one transcription; replace language code if needed;
     semicolon-separated]
-10#MS#TITLE#AR###: title(s) on the front page and/or of parts
-    [in one-to-one transcription; replace language code if needed;
-    semicolon-separated]
+10#MS#TITLE#AR###: Min faḍāʾil al-marḥūm al-šayḫ Abū ʿAlī ʿAbd al-Malik
 30#MS#DATE#AH####: date of copy/writing in hijri era: DD-MM-YYYY, 
     DD-MM-YYYY@page, DD-MM-YYYY@page_range
 30#MS#PLACE######: COPIED@ThurayaURI, WRITTEN@ThurayaURI, 
